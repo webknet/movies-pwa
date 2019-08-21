@@ -1,0 +1,19 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "movies",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "actors",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "year",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
