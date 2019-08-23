@@ -4,7 +4,7 @@
             class="bg-image"
             style="display:block;">
             <v-toolbar 
-                style="position:fixed;"
+                style="position:fixed;width:100%;"
                 v-bind:style="{ transform: transform }"
                 :src="require('./assets/cinema1.jpg')"
                 dark
@@ -170,13 +170,13 @@
         mounted() {
             this.onResize()
 
-            //document.body.addEventListener('touchmove', this.handleScroll)
             document.addEventListener('scroll', this.handleScroll)
+            //document.body.addEventListener('touchstart', this.handleScroll, { passive: true })
 
         },
         destroyed() {
-            //document.removeEventListener('scroll', this.handleScroll)
-            document.removeEventListener('touchmove', this.handleScroll)
+            document.removeEventListener('scroll', this.handleScroll)
+            //document.removeEventListener('touchstart', this.handleScroll, { passive: true })
         }
     }
 </script>

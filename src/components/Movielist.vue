@@ -42,24 +42,24 @@
             <v-divider></v-divider>
            <v-card-text style="min-height:130px;">
                <v-layout class="faces-layout">
-                        <div v-for="(actor, index) in movie.actor_facets" :key="index">
-                            <v-flex text-center>
-                                <v-tooltip top>
-                                    <template v-slot:activator="{ on }">
-                                       <div class="elevation-10 ma-1" v-on="on" style="border: solid 1px white; ">
-                                            <v-img style="_border-radius:5px" :src="actor.split('|')[0]" max-width="60" width="45" height="68" alt=""></v-img>
-                                        </div>
-                                    </template>
-                                    <span class="caption font-weight-light">{{ actor.split('|')[1]}}</span>
-                                </v-tooltip>
-                                
-                               <!--   -->
+                    <div v-for="(actor, index) in movie.actor_facets" :key="index">
+                        <v-flex text-center>
+                            <v-tooltip top>
+                                <template v-slot:activator="{ on }">
+                                    <div class="elevation-10 ma-1" v-on="on" style="border: solid 1px white; ">
+                                        <v-img style="_border-radius:5px" :src="actor.split('|')[0]" max-width="60" width="45" height="68" alt=""></v-img>
+                                    </div>
+                                </template>
+                                <span class="caption font-weight-light">{{ actor.split('|')[1]}}</span>
+                            </v-tooltip>
                             
-                            </v-flex>
-                            
-                            
-                        </div>
-                    </v-layout>
+                            <!--   -->
+                        
+                        </v-flex>
+                        
+                        
+                    </div>
+                </v-layout>
            </v-card-text>
        
     </v-card>
